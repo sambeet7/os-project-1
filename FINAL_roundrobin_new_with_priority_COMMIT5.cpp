@@ -27,7 +27,7 @@ p[i]=0;
 }
 for(int i=0;i<n;i++)
 {
-    if(prior[i]<prior[i+1])
+    if(prior[i]>prior[i+1])
 {
     temp1=prior[i];
     prior[i]=prior[i+1];
@@ -37,12 +37,12 @@ for(int i=0;i<n;i++)
     bt[i]=bt[i+1];
     bt[i+1]=temp1;
 
+}
 
 }
-}
-for(i=0;i<n;i++)
+for(int k=0;k<n;k++)
 {
-    b[i]=bt[i];
+    b[k]=bt[k];
 }
 
 cout<<"enter the time quantum:";
@@ -95,4 +95,3 @@ cout<<"\nAVERAGE WAITING TIME :"<<avg;
 cout<<"\nAVERAGE TURN AROUND TIME:"<<turn_around_time;
 cout<<"\n--------------------------------------------------------------------------------------------------------------\n";
 }
-
